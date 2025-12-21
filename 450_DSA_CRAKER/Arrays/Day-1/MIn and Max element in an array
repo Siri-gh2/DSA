@@ -1,11 +1,23 @@
-# DSA Journey – Arrays (Concepts & Patterns)
-
-This post documents the **array problems** I practiced, focusing on **patterns, optimizations, and interview-ready thinking**. Each problem includes the idea, pitfalls, and complexity — not just code.
-
 ---
 
-#  Find Minimum & Maximum Element in an Array  
-### (and Sum of Minimum & Maximum)
+## Find Minimum & Maximum Element in an Array  
+(and Sum of Minimum & Maximum)
+
+**Pattern:** Single-Pass Traversal
+
+**Idea:**
+- Initialize `min` and `max` with the first element
+- Traverse the array once
+- Update both values whenever a smaller or larger element is found
+- Sum is simply `min + max`
+
+**Edge Cases:**
+- Empty array → handle separately
+- Single element → min = max = that element
+- All elements same → min and max remain same
+- All negative values → works normally
+
+---
 
 ### 📌 Problem Links
 - [GeeksforGeeks – Find Minimum and Maximum Element in an Array](https://www.geeksforgeeks.org/problems/find-minimum-and-maximum-element-in-an-array4428/1)
@@ -15,65 +27,33 @@ This post documents the **array problems** I practiced, focusing on **patterns, 
 
 ## 🧠 Concept
 
-This problem focuses on finding the **smallest** and **largest** elements in an array efficiently.
+The goal is to find the **smallest** and **largest** elements efficiently without scanning the array multiple times.
 
-Example:
-Input : [3, 5, 1, 8, 2]
-Min : 1
-Max : 8
-Sum : 9
-
-
-This is a **fundamental array problem** and a common interview question used to test:
-- Loop control
-- Edge case handling
-- Optimization (avoiding repeated scans)
+Example:  
+Input : `[3, 5, 1, 8, 2]`  
+Min : `1`  
+Max : `8`  
+Sum : `9`
 
 ---
 
 ## 📐 Approach (Single Traversal)
 
-### 🔹 Core Idea
-Instead of scanning the array multiple times:
-- Initialize both `min` and `max` with the **first element**
-- Traverse the array once
-- Update `min` and `max` when a smaller or larger element is found
-
-This avoids unnecessary work and gives the optimal solution.
+### 🔹 Why this works
+- Every element is checked exactly once
+- Avoids repeated scanning (`O(n²)`)
+- Optimal and interview-friendly
 
 ---
 
-## ⚠️ Edge Cases
-
-| Case | Explanation |
-|----|----|
-| Empty array | No min/max (handle separately) |
-| Single element | Min = Max = that element |
-| All elements same | Min and Max remain same |
-| All negative values | Works normally |
-
----
-
-## ⏱ Complexity Analysis
-
-- **Time Complexity:** `O(n)`
-  - Only one traversal of the array.
-- **Space Complexity:** `O(1)`
-  - No extra space used.
-
----
-
-## 💻 C++ Code – Find Min & Max
+## 💻 C++ Implementation – Min & Max
 
 ```cpp
-#include <bits/stdc++.h>
-using namespace std;
-
 pair<int, int> getMinMax(vector<int>& arr) {
     int n = arr.size();
 
     if (n == 0)
-        return {-1, -1};   // depends on problem constraints
+        return {-1, -1};
 
     int mini = arr[0];
     int maxi = arr[0];
@@ -87,11 +67,8 @@ pair<int, int> getMinMax(vector<int>& arr) {
 
     return {mini, maxi};
 }
-
-💻 C++ Code – Sum of Min & Max
-
-#include <bits/stdc++.h>
-using namespace std;
+---
+💻 C++ Implementation – Sum of Min & Max
 
 int sumOfMaxMin(int arr[], int n) {
     if (n == 0)
@@ -109,39 +86,24 @@ int sumOfMaxMin(int arr[], int n) {
 
     return mini + maxi;
 }
-
-Sample Output
-
-Input:
-
-[3, 5, 1, 8, 2]
-
-
-Output:
+---
+Sample Output:
 
 Minimum = 1
 Maximum = 8
 Sum     = 9
-
 ---
+
 Pattern Learned:
-Single-pass optimization
 
-Track multiple values (min, max) in one traversal
+Single-Pass Optimization
 
-Avoid repeated scanning (O(n²) → O(n))
----
-❌ Common Mistakes
+Used in:
 
-Looping till n-1 instead of n
+Min / Max problems
 
-Initializing min/max with INT_MAX / INT_MIN unnecessarily
+Range calculations
 
-Using variable names min and max (conflicts with STL)
+Kadane’s Algorithm
 
-Multiple loops for min and max
----
-✅ Key Takeaway
-
-If a problem asks for multiple values from an array, try to compute them together in one pass.
----
+Prefix-based logic
