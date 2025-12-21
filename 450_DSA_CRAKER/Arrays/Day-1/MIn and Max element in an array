@@ -1,3 +1,9 @@
+# DSA Journey – Arrays (Concepts & Patterns)
+
+This post documents the **array problems** I practiced, focusing on **patterns, optimizations, and interview-ready thinking**. Each problem includes the idea, pitfalls, and complexity — not just code.
+
+---
+
 #  Find Minimum & Maximum Element in an Array  
 ### (and Sum of Minimum & Maximum)
 
@@ -117,14 +123,14 @@ Minimum = 1
 Maximum = 8
 Sum     = 9
 
-----
+---
 Pattern Learned:
 Single-pass optimization
 
 Track multiple values (min, max) in one traversal
 
 Avoid repeated scanning (O(n²) → O(n))
-----
+---
 ❌ Common Mistakes
 
 Looping till n-1 instead of n
@@ -134,8 +140,8 @@ Initializing min/max with INT_MAX / INT_MIN unnecessarily
 Using variable names min and max (conflicts with STL)
 
 Multiple loops for min and max
------
+---
 ✅ Key Takeaway
 
 If a problem asks for multiple values from an array, try to compute them together in one pass.
-----
+---
