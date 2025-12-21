@@ -1,0 +1,141 @@
+#  Find Minimum & Maximum Element in an Array  
+### (and Sum of Minimum & Maximum)
+
+### 📌 Problem Links
+- [GeeksforGeeks – Find Minimum and Maximum Element in an Array](https://www.geeksforgeeks.org/problems/find-minimum-and-maximum-element-in-an-array4428/1)
+- [Code360 – Sum of Max and Min](https://www.naukri.com/code360/problems/sum-of-max-and-min_1081476)
+
+---
+
+## 🧠 Concept
+
+This problem focuses on finding the **smallest** and **largest** elements in an array efficiently.
+
+Example:
+Input : [3, 5, 1, 8, 2]
+Min : 1
+Max : 8
+Sum : 9
+
+
+This is a **fundamental array problem** and a common interview question used to test:
+- Loop control
+- Edge case handling
+- Optimization (avoiding repeated scans)
+
+---
+
+## 📐 Approach (Single Traversal)
+
+### 🔹 Core Idea
+Instead of scanning the array multiple times:
+- Initialize both `min` and `max` with the **first element**
+- Traverse the array once
+- Update `min` and `max` when a smaller or larger element is found
+
+This avoids unnecessary work and gives the optimal solution.
+
+---
+
+## ⚠️ Edge Cases
+
+| Case | Explanation |
+|----|----|
+| Empty array | No min/max (handle separately) |
+| Single element | Min = Max = that element |
+| All elements same | Min and Max remain same |
+| All negative values | Works normally |
+
+---
+
+## ⏱ Complexity Analysis
+
+- **Time Complexity:** `O(n)`
+  - Only one traversal of the array.
+- **Space Complexity:** `O(1)`
+  - No extra space used.
+
+---
+
+## 💻 C++ Code – Find Min & Max
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+pair<int, int> getMinMax(vector<int>& arr) {
+    int n = arr.size();
+
+    if (n == 0)
+        return {-1, -1};   // depends on problem constraints
+
+    int mini = arr[0];
+    int maxi = arr[0];
+
+    for (int i = 1; i < n; i++) {
+        if (arr[i] < mini)
+            mini = arr[i];
+        if (arr[i] > maxi)
+            maxi = arr[i];
+    }
+
+    return {mini, maxi};
+}
+
+💻 C++ Code – Sum of Min & Max
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int sumOfMaxMin(int arr[], int n) {
+    if (n == 0)
+        return 0;
+
+    int mini = arr[0];
+    int maxi = arr[0];
+
+    for (int i = 1; i < n; i++) {
+        if (arr[i] < mini)
+            mini = arr[i];
+        if (arr[i] > maxi)
+            maxi = arr[i];
+    }
+
+    return mini + maxi;
+}
+
+Sample Output
+
+Input:
+
+[3, 5, 1, 8, 2]
+
+
+Output:
+
+Minimum = 1
+Maximum = 8
+Sum     = 9
+
+----
+Pattern Learned:
+Single-pass optimization
+
+Track multiple values (min, max) in one traversal
+
+Avoid repeated scanning (O(n²) → O(n))
+----
+❌ Common Mistakes
+
+Looping till n-1 instead of n
+
+Initializing min/max with INT_MAX / INT_MIN unnecessarily
+
+Using variable names min and max (conflicts with STL)
+
+Multiple loops for min and max
+-----
+✅ Key Takeaway
+
+If a problem asks for multiple values from an array, try to compute them together in one pass.
+----
