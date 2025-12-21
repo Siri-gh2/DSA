@@ -97,7 +97,8 @@ int main() {
 Sample Output:
 5 4 3 2 1
 
-🧩** Pattern Learned**
+-----
+ **Pattern Learned**
 
 Two Pointer Technique
 
@@ -111,6 +112,6 @@ Rotate array
 
 Palindrome checking
 
-Partitioning problems
+Partitioning problem
 
 
