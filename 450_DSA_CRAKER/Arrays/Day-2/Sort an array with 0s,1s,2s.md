@@ -4,6 +4,12 @@ This problem focuses on sorting an array containing only `0`, `1`, and `2` **wit
 
 ---
 
+## 📌 Problem Links
+- [GeeksforGeeks – Sort an Array of 0s, 1s, and 2s](https://www.geeksforgeeks.org/problems/sort-an-array-of-0s-1s-and-2s4231/1)
+- [Code360 – Sort 0s, 1s, and 2s](https://www.naukri.com/code360/problems/sort-0-1-2_631055?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker&leftPanelTabValue=SUBMISSION)
+
+---
+
 ## 🧠 Concept
 
 Given an array consisting only of `0`, `1`, and `2`, the task is to sort the array in ascending order.
