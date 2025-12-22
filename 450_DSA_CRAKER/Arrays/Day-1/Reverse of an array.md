@@ -113,5 +113,3 @@ Rotate array
 Palindrome checking
 
 Partitioning problem
-
-
