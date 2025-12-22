@@ -1,5 +1,5 @@
 ## 📌 Problem Link:
-- [eetCode – Add Two Numbers in LinkedList](https://leetcode.com/problems/add-two-numbers/description/))
+- [LeetCode – Add Two Numbers in LinkedList](https://leetcode.com/problems/add-two-numbers/description/))
 
 ---
 
