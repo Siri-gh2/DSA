@@ -8,9 +8,11 @@
 class Solution {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+    
         ListNode* dummy = new ListNode(0);
         ListNode* curr = dummy;
         int c = 0;
+        
         while (l1 || l2 || c) {
             int x = (l1 != nullptr) ? l1->val : 0;
             int y = (l2 != nullptr) ? l2->val : 0;
