@@ -16,6 +16,7 @@ public:
     ~Stack() {
         delete[] arr;
     }
+    
 //push
     void push(int x) {
         if (top == capacity - 1) {
@@ -24,6 +25,7 @@ public:
         }
         arr[++top] = x;
     }
+    
 //pop
     int pop() {
         if (top == -1) {
@@ -32,6 +34,7 @@ public:
         }
         return arr[top--];
     }
+    
 //peekvalue
     int peek() {
         if (top == -1) {
@@ -40,14 +43,17 @@ public:
         }
         return arr[top];
     }
+    
 //empty stack
     bool isEmpty() {
         return top == -1;
     }
+    
 //stack is full
     bool isFull() {
         return top == capacity - 1;
     }
+    
 //display stack
     void display() {
         if (isEmpty()) {
