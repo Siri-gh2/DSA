@@ -114,7 +114,7 @@ vector<int> jobScheduling(vector<vector<int>> &jobs)
 
 ```
 ## 💻 C++ Implementation — Standard (Code360)
-
+```
 vector<int> jobScheduling(vector<vector<int>> &jobs)
 {
     int n = jobs.size();
