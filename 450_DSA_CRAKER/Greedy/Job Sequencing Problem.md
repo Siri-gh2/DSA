@@ -153,7 +153,7 @@ When maxDeadline is large, the inner loop can be slow.
 We can use Disjoint Set Union to find the nearest free slot efficiently.
 
 ## 💻 C++ Implementation — Optimized (DSU)
-
+```
 class Solution {
   public:
     int find(int x, vector<int>& parent) {
