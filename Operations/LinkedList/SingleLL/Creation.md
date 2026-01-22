@@ -85,7 +85,7 @@ int main() {
     return 0;
 }
 
-
+```
 Example Output
 10 -> 20 -> 30 -> NULL
 
