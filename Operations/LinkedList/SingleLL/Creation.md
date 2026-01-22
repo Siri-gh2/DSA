@@ -21,7 +21,7 @@ public:
         next = nullptr;
     }
 };
-
+```
 💻 C++ Program: Creation & Display
 
 #include <bits/stdc++.h>
