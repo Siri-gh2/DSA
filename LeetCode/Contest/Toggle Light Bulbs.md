@@ -39,15 +39,6 @@ Because the range is small (1–100), we can store the state in an array instead
 
 ---
 
-## Common Mistake ❌
-
-```cpp
-on[b] != on[b];
-```
-This compares, it does NOT update.
-
-So nothing changes.
-
 ## Correct Toggle
 
 ```
