@@ -105,3 +105,10 @@ public:
     }
 };
 ```
+## What I Learned
+
+- Some problems require counting values and then counting the counts.
+
+- Order matters → scan original array at the end.
+
+- “Unique element” and “unique frequency” are completely different ideas.
