@@ -69,14 +69,14 @@ Start from right:
 4 < 5 ✅
 3 < 4 ✅
 3 < 3 ❌ (stop)
-
+```
 Prefix length = 4
 
 
 Remaining array:
-
+```
 [3, 4, 5]
-
+```
 Which is strictly increasing.
 
 ---
@@ -101,14 +101,12 @@ public:
 ```
 ### Complexity Analysis
 
-Time Complexity: O(n)
+- Time Complexity: O(n)
 
-Space Complexity: O(1)
+- Space Complexity: O(1)
 
 ### Takeaway
 
 Think in terms of what must remain, not what to remove.
 
 
-
-### Input
