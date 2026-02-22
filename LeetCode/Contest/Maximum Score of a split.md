@@ -117,11 +117,11 @@ public:
      return maxScore;
  }
 };
+```
+## 📌 Key Takeaways
 
-**📌 Key Takeaways**
+- Always consider overflow in prefix/sum problems
 
-Always consider overflow in prefix/sum problems
+- Use long long when constraints allow large values
 
-Use long long when constraints allow large values
-
-Prefix + suffix techniques are common in contest problems
+- Prefix + suffix techniques are common in contest problems
