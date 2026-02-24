@@ -6,6 +6,7 @@ Unlike array-based stacks, this implementation **does not suffer from fixed size
 
 ---
 
+
 ## 📌 Stack Principle
 
 - **LIFO** – Last In, First Out
@@ -131,8 +132,9 @@ int main() {
 
     return 0;
 }
+```
 
-Time Complexity
+## Time Complexity
 | Operation | Complexity |
 | --------- | ---------- |
 | Push      | O(1)       |
@@ -141,7 +143,7 @@ Time Complexity
 | Display   | O(n)       |
 
 
-Space Complexity
+## Space Complexity
 
 | Feature        | Array Stack | Linked List Stack      |
 | -------------- | ----------- | ---------------------- |
@@ -150,7 +152,7 @@ Space Complexity
 | Memory         | Contiguous  | Non-contiguous         |
 | Implementation | Simple      | Slightly complex       |
 
-📌 Key Takeaways
+## 📌 Key Takeaways
 
 Linked list stack avoids size limitations
 
