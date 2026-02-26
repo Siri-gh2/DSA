@@ -1,9 +1,3 @@
-
----
-
-# linked_list_deletion.md`
-
-```md
 # Singly Linked List – Deletion Operations
 
 Deletion removes a node from the linked list safely.
