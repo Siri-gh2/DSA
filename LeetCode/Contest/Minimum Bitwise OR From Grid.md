@@ -86,10 +86,10 @@ Space,O(1),No extra data structures are used (excluding grid modification).
 
 ## Example Walkthrough
 - Input:
-  ```
+```
   grid = [[3, 5], [6, 4]]
 ```
-Bit 2 (Value 4): - Try target_mask = 3 (binary 011).
+- Bit 2 (Value 4): - Try target_mask = 3 (binary 011).
 
 Row 0 has 3 (011 | 011 == 011 ✅).
 
